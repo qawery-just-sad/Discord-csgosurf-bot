@@ -1,0 +1,35 @@
+{
+  "name": "discord-csgosurf-bot",
+  "version": "1.0.0",
+  "description": "bot for csgo server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qawery-just-sad/Discord-csgosurf-bot.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "qawery-just-sad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qawery-just-sad/Discord-csgosurf-bot/issues"
+  },
+  "homepage": "https://github.com/qawery-just-sad/Discord-csgosurf-bot#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "db-keep-alive": "^1.0.2",
+    "discord.js": "^11.5.1",
+    "gamedig": "^2.0.17",
+    "humanize-duration": "^3.21.0",
+    "mysql": "^2.17.1",
+    "steam-user": "^4.12.4",
+    "steamapi": "^2.0.7",
+    "steamid": "^1.1.3",
+    "steamidconvert": "^0.2.4",
+    "superagent": "^5.1.0"
+  }
+}
