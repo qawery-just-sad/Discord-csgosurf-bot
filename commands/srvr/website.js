@@ -9,7 +9,7 @@ module.exports = {
         accessableby: "Members",
         aliases: ["web"]
     },
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
         const embed = new RichEmbed()
         .setTitle('QSURF Website')
         .setColor(0x1e90ff)
