@@ -1,17 +1,10 @@
-const Discord = require('discord.js');
-const Gamedig = require('gamedig');
-const { prefix, token } = require('./config.json');
-const client = new Discord.Client();
+const { Client, Collection } = require("discord.js");
+const { token } = require("./botconfig.json");
+const bot = new Client();
 
-client.once('ready', () => {
-    console.log('Ready!')
-})
+["aliases", "commands"].forEach(x => bot[x] = new Collection());
+["command", "event"].forEach(x => require(`./hands/${x}`)(bot));
 
-client.login(token);
+bot.login(token);
 
-client.on('message', message => {
-    if(message.content.startsWith(`${prefix}ping`)) {
-        message.channel.send("Ping =")
-    }
-})
 
