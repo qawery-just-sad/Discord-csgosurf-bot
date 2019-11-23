@@ -15,7 +15,7 @@ module.exports = {
         .setColor(0x1e90ff)
         .setDescription('Link to invite Server Status bot!')
         .setURL('https://discordapp.com/oauth2/authorize?client_id=640531944320401421&scope=bot&permissions=8')
-        .setThumbnail('https://cdn.discordapp.com/app-icons/640531944320401421/e0e255c2c18785e1f8d4ec96b7cca6e8.png?size=256');
+        .setThumbnail(bot.user.avatarURL);
         message.channel.send(embed);
     }
 }
