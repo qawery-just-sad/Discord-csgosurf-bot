@@ -5,10 +5,10 @@ module.exports = {
         description: "PONG! Displays the api & bot latency",
         usage: "!ping",
         category: "bot",
-        accessableby: "Members"
+        accessableby: "Members",
+        aliases: ["latency"]
     },
     run: async (bot, message, args) => {
-    message.channel.startTyping();
     message.channel.send("Pinging...").then(m => {
         let ping = m.createdTimestamp - message.createdTimestamp
         let choices = ["Pong! 🏓 ", "🏓 "]
@@ -16,6 +16,5 @@ module.exports = {
 
         m.edit(`${response}: Bot Latency: \`${ping}\`, API Latency: \`${Math.round(bot.ping)}\``)
     });
-    message.channel.stopTyping();
   }
 }
