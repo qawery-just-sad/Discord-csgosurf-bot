@@ -1,11 +1,14 @@
 const { prefix } = require("../../botconfig.json");
 
 module.exports = async (bot, message) => { 
-  if (message.author.bot) return;
-  if (message.content.indexOf(prefix) !== 0) return;
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  const cmd = bot.commands.get(command);
-  if (!cmd) return;
-  cmd.run(bot, message, args);
-    }
+  
+  if(message.author.bot || message.channel.type === "dm") return;
+
+  let args = message.content.slice(prefix.length).trim().split(/ +/g);
+  let cmd = args.shift().toLowerCase();
+
+  if(!message.content.startsWith(prefix)) return;
+  let commandfile = bot.commands.get(cmd) || bot.commands.get(bot.aliases.get(cmd))
+  if(commandfile) commandfile.run(bot, message, args)
+
+  }
