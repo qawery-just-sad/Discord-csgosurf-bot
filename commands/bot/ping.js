@@ -12,8 +12,9 @@ module.exports = {
     message.channel.send("Pinging...").then(m => {
         let choices = ["Pong! 🏓 ", "🏓 "]
         let response = choices[Math.floor(Math.random() * choices.length)]
-
-        m.edit(`${response}: Bot Latency: \`${Math.round(bot.ping)}\``)
+        
+        let ping = m.createdTimestamp - message.createdTimestamp
+        m.edit(`${response}: Bot Latency: \`${ping}\``)
     });
   }
 }
