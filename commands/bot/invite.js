@@ -1,4 +1,5 @@
 const { RichEmbed } = require('discord.js');
+const { whiteish } = require("../../colors.json")
 
 module.exports = {
     config: {
@@ -12,7 +13,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const embed = new RichEmbed()
         .setTitle('Server Status Invite Link')
-        .setColor(0xebebeb)
+        .setColor(whiteish)
         .setDescription('Link to invite Server Status bot!')
         .setURL('https://discordapp.com/oauth2/authorize?client_id=640531944320401421&scope=bot&permissions=8')
         .setThumbnail(bot.user.avatarURL);

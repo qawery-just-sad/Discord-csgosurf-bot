@@ -1,4 +1,5 @@
 const { RichEmbed } = require('discord.js');
+const { blue } = require("../../colors.json")
 
 module.exports = {
     config: {
@@ -12,7 +13,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const embed = new RichEmbed()
         .setTitle('QSURF Website')
-        .setColor(0x1e90ff)
+        .setColor(blue)
         .setDescription('Our server website!')
         .setURL('http://178.235.37.225:82/')
         .setThumbnail('http://178.235.37.225:82/img/qsurflogo-mini.png');

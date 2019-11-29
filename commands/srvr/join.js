@@ -1,6 +1,7 @@
 const { RichEmbed } = require('discord.js');
-const gamedig = require('gamedig')
-const { server } = require("../../botconfig.json")
+const gamedig = require('gamedig');
+const { server } = require("../../botconfig.json");
+const { blue, darkpurple } = require("../../colors.json")
 
 module.exports = {
     config: {
@@ -18,7 +19,7 @@ module.exports = {
             let map = state.map;
             const embed = new RichEmbed()
             .setTitle("CSGO QSURF Server")
-            .setColor(0x1e90ff)
+            .setColor(blue)
             .addField(`Current map`, `${map}`, true)
             .addField(`Players`, `${players} /${max}`, true)
             .addField(`** Connect Link**`, `**steam://connect/178.235.37.225:27014 **`)
@@ -29,7 +30,7 @@ module.exports = {
             console.log(error);
             const embed = new RichEmbed()
             .setTitle('CSGO QSURF Server')
-            .setColor(0x141414)
+            .setColor(darkpurple)
             .setDescription('**SERVER IS OFFLINE**')
             .setThumbnail(bot.user.avatarURL);
             message.channel.send(embed);

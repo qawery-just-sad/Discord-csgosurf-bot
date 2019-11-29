@@ -1,4 +1,5 @@
 const { RichEmbed } = require('discord.js');
+const { dark } = require("../../colors.json")
 
 module.exports = {
     config: {
@@ -12,7 +13,7 @@ module.exports = {
     run: async (bot, message, args) => {
         const embed = new RichEmbed()
         .setTitle('Help develop the bot!')
-        .setColor(0x141414)
+        .setColor(dark)
         .setDescription('Link to Server Status bot github page!')
         .setURL('https://github.com/qawery-just-sad/Discord-csgosurf-bot')
         .setThumbnail('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
