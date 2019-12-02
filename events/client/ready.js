@@ -3,6 +3,27 @@ const { server, prefix } = require("../../botconfig.json")
 
 module.exports = async bot => {
     console.log(`${bot.user.username} is online`)
-    bot.user.setStatus('idle')
-    bot.user.setActivity('Cyberpunk 2077', {type: 'PLAYING'});
-}
+
+    function haha(){
+        gamedig.query(server).then((state) =>{
+        let players = state.raw.numplayers
+        let map = state.map
+        let activities = `with ${players} players, on ${map}, with my prefix ${prefix}`
+        if(players>=1) {
+            bot.user.setStatus('online');
+            bot.user.setActivity(activities, {type: 'PLAYING'})
+        }
+        else if(players<1){
+            bot.user.setActivity(`alone on ${map} | Prefix: ${prefix}`, {type: 'PLAYING'});
+             bot.user.setStatus('idle')
+        }
+        }).catch((error) => {
+            bot.user.setActivity(`Cyberpunk 2077 | Prefix: ${prefix}`, {type: 'PLAYING'});
+            bot.user.setStatus('dnd');
+            console.log(error)
+        })
+    }
+    var intervalms=60000;
+
+    setInterval(haha, intervalms)
+}   

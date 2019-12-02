@@ -1,5 +1,5 @@
 {
-    "prefix": "/",
+    "prefix": ">",
     "token": "YOUR BOT TOKEN",
     "server": {
         "host": "178.235.37.225",
