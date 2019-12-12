@@ -4,6 +4,8 @@
     "server": {
         "host": "178.235.37.225",
         "port": "27014",
-        "type": "csgo"
+        "type": "csgo",
+        "password": "very_secret_password_only_god_knows_it",
+        "address": "@server.host"
     }
 }

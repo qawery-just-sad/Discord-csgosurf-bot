@@ -4,9 +4,9 @@ const { server, prefix } = require("../../botconfig.json")
 module.exports = async bot => {
     console.log(`${bot.user.username} is online`)
 
-    function haha(){
+    function query(){
         gamedig.query(server).then((state) =>{
-        let players = state.raw.numplayers
+        let players = state.players
         let map = state.map
         let activities = `with ${players} players, on ${map}, with my prefix ${prefix}`
         if(players>=1) {
@@ -20,10 +20,10 @@ module.exports = async bot => {
         }).catch((error) => {
             bot.user.setActivity(`Cyberpunk 2077 | Prefix: ${prefix}`, {type: 'PLAYING'});
             bot.user.setStatus('dnd');
-            console.log(error)
+            console.log(error `\n Server is offline or broken!`)
         })
     }
     var intervalms=60000;
 
-    setInterval(haha, intervalms)
+    setInterval(query, intervalms)
 }   
