@@ -5,7 +5,7 @@ module.exports = async bot => {
     console.log(`${bot.user.username} is online`)
 
     function query(){
-        gamedig.query(server).then((state) =>{
+        gamedig.query({host:server.host, type:server.type, port:server.port}).then((state) =>{
         let players = state.players
         let map = state.map
         let activities = `with ${players} players, on ${map}, with my prefix ${prefix}`

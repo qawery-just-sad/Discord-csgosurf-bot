@@ -13,7 +13,7 @@ module.exports = {
         aliases: ["j", "q", "qsurf", "surf", "server", "srvr"]
     },
     run: async (bot, message) => {
-        gamedig.query(server).then((state) =>{
+        gamedig.query({host:server.host, type:server.type, port:server.port}).then((state) =>{
             let players = state.players.length;
             let max = state.maxplayers;
             let map = state.map;
