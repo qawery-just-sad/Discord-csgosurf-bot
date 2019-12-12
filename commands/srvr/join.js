@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const gamedig = require('gamedig');
-const { server } = require("../../botconfig.json");
+const { gdserver } = require("../../botconfig.json");
 const { blue, darkpurple } = require("../../colors.json")
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         aliases: ["j", "q", "qsurf", "surf", "server", "srvr"]
     },
     run: async (bot, message) => {
-        gamedig.query({host:server.host, type:server.type, port:server.port}).then((state) =>{
+        gamedig.query(gdserver).then((state) =>{
             let players = state.players.length;
             let max = state.maxplayers;
             let map = state.map;

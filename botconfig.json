@@ -1,11 +1,13 @@
 {
     "prefix": ">",
     "token": "YOUR BOT TOKEN",
-    "server": {
+    "gdserver": {
         "host": "178.235.37.225",
         "port": "27014",
-        "type": "csgo",
-        "password": "very_secret_password_only_god_knows_it",
-        "address": "@server.host"
+        "type": "csgo"
+    },
+    "rcon":{
+        "address":"@gdserver.host",
+        "password":"passwordo!"
     }
 }

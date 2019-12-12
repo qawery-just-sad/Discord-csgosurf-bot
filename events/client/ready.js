@@ -1,12 +1,12 @@
 const gamedig = require('gamedig')
-const { server, prefix } = require("../../botconfig.json")
+const { gdserver, prefix } = require("../../botconfig.json")
 
 module.exports = async bot => {
     console.log(`${bot.user.username} is online`)
 
-    function query(){
-        gamedig.query({host:server.host, type:server.type, port:server.port}).then((state) =>{
-        let players = state.players
+    function status(){
+        gamedig.query(gdserver).then((state) =>{
+        let players = state.players.length
         let map = state.map
         let activities = `with ${players} players, on ${map}, with my prefix ${prefix}`
         if(players>=1) {
@@ -15,15 +15,15 @@ module.exports = async bot => {
         }
         else if(players<1){
             bot.user.setActivity(`alone on ${map} | Prefix: ${prefix}`, {type: 'PLAYING'});
-             bot.user.setStatus('idle')
+            bot.user.setStatus('idle')
         }
         }).catch((error) => {
             bot.user.setActivity(`Cyberpunk 2077 | Prefix: ${prefix}`, {type: 'PLAYING'});
             bot.user.setStatus('dnd');
-            console.log(error `\n Server is offline or broken!`)
+            console.log(error, `\n Server is offline or broken!`)
         })
     }
     var intervalms=60000;
 
-    setInterval(query, intervalms)
+    setInterval(status, intervalms)
 }   
