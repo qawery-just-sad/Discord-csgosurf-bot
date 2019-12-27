@@ -1,6 +1,6 @@
-const hand = require('rcon-srcds');
+const hand = require('srcds-rcon');
 const { rconpass, server } = require("../../botconfig.json");
-const Rcon = new hand({host:server.host, port:server.port, maximumPacketSize: 0, encoding: 'ascii', timeout: 2500})
+const Rcon = hand({address:`${server.host}:${server.port}`, password:rconpass})
 
 module.exports = {
     config: {
@@ -16,8 +16,13 @@ module.exports = {
         else if (!args.length) {return message.channel.send(`**:warning: Please provide valid rcon command**`)}
         else { var fargs = args.join(" ");
         try{
-            if (Rcon.authenticated != 1) await Rcon.authenticate(rconpass);
-            await Rcon.execute(fargs).then(Response => message.channel.send(`***:white_check_mark: Success!***\n \`\`\`${Response}\`\`\``))
-        } catch(error){message.channel.send(`**:warning: There was an error try again later.**`), console.log(error)}}
+            await Rcon.connect();
+            await Rcon.command(fargs).then(Response => message.channel.send(`***:white_check_mark: Success!***\n \`\`\`${Response}\`\`\``))
+            Rcon.disconnect()
+        } catch(error) {
+            message.channel.send(`**:warning: There was an error try again later.**`);
+            if (error.details && error.details.partialResponse) {console.log(`Got partial response: ${err.details.partialResponse}`), console.log(error)}
+        }
     }
+}
 }  
