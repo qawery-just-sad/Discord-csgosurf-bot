@@ -4,7 +4,7 @@ const { whiteish } = require("../../colors.json")
 module.exports = {
     config: {
         name: "invite",
-        description: "link to invite the bot",
+        description: "Link to invite the bot to your server!",
         usage: "!invite",
         category: "bot",
         accessableby: "Members",

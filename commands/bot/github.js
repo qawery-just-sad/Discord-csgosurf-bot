@@ -4,7 +4,7 @@ const { dark } = require("../../colors.json")
 module.exports = {
     config: {
         name: "github",
-        description: "help me develop the bot",
+        description: "Help develop the bot",
         usage: "!github",
         category: "bot",
         accessableby: "Members",

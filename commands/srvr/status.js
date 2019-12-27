@@ -1,19 +1,19 @@
 const { RichEmbed } = require('discord.js');
 const gamedig = require('gamedig');
-const { gdserver } = require("../../botconfig.json");
+const { server } = require("../../botconfig.json");
 const { blue, darkpurple } = require("../../colors.json")
 
 module.exports = {
     config: {
-        name: "join",
-        description: "link to invite the bot",
-        usage: "!join",
+        name: "status",
+        description: "Shows csgo server status",
+        usage: "!status",
         category: "srvr",
         accessableby: "Members",
-        aliases: ["j", "q", "qsurf", "surf", "server", "srvr"]
+        aliases: ["join", "j", "s", "q", "qsurf", "surf", "server", "srvr", "stats"]
     },
     run: async (bot, message) => {
-        gamedig.query(gdserver).then((state) =>{
+        gamedig.query(server).then((state) =>{
             let players = state.players.length;
             let max = state.maxplayers;
             let map = state.map;

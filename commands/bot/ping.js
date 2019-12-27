@@ -2,7 +2,7 @@
 module.exports = { 
     config: {
         name: "ping",
-        description: "PONG! Displays the api & bot latency",
+        description: "PONG! Displays the bot latency",
         usage: "!ping",
         category: "bot",
         accessableby: "Members",

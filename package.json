@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/qawery-just-sad/Discord-csgosurf-bot#readme",
   "dependencies": {
+    "@thomas-smyth/rcon": "^1.0.5",
     "ascii-table": "0.0.9",
     "colors": "^1.4.0",
     "common-tags": "^1.8.0",
@@ -31,6 +32,7 @@
     "log-symbols": "^3.0.0",
     "mysql": "^2.17.1",
     "path": "^0.12.7",
+    "rcon-srcds": "^1.0.0",
     "srcds-rcon": "^2.2.1",
     "steam-user": "^4.12.4",
     "steamapi": "^2.0.7",

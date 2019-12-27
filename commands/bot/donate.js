@@ -4,7 +4,7 @@ const { blue } = require("../../colors.json");
 module.exports = {
     config: {
         name: "donate",
-        description: "link to donate to the bot",
+        description: "Link to donate to the bot",
         usage: "!donate",
         category: "bot",
         accessableby: "Members",

@@ -1,11 +1,11 @@
 const gamedig = require('gamedig')
-const { gdserver, prefix } = require("../../botconfig.json")
+const { server, prefix } = require("../../botconfig.json")
 
 module.exports = async bot => {
     console.log(`${bot.user.username} is online`)
 
     function status(){
-        gamedig.query(gdserver).then((state) =>{
+        gamedig.query(server).then((state) =>{
         let players = state.players.length
         let map = state.map
         let activities = `with ${players} players, on ${map}, with my prefix ${prefix}`

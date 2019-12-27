@@ -1,7 +1,7 @@
 const { prefix } = require("../../botconfig.json");
 
 module.exports = async (bot, message) => { 
-  if(message.isMentioned(bot.user)) message.channel.send(`**The prefix is \`${prefix}\`**`);
+  if(message.isMentioned(bot.user)) message.channel.send(`**The prefix is \`${prefix}\`\nFor any additional help type \`${prefix}help\`**`);
   if(message.author.bot || message.channel.type === "dm") return;
 
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
