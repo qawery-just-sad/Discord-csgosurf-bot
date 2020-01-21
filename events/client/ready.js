@@ -23,7 +23,7 @@ module.exports = async bot => {
             console.log(error, `\n Server is offline or broken!`)
         })
     }
-    var intervalms=60000;
+    var intervalms=180000;
 
     setInterval(status, intervalms)
 }   
