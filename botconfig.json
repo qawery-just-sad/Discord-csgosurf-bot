@@ -1,10 +1,15 @@
 {
     "prefix": ">",
-    "token": "YOUR BOT TOKEN",
+    "token": "NjQwNTMxOTQ0MzIwNDAxNDIx.XiXoow.Krz8hU076xsiRzuNhigXGsEJueA",
     "server": {
         "host": "178.235.37.225",
         "port": "27014",
         "type": "csgo"
     },
-    "rconpass": "PASSWORDO!"
+    "rconpass": "PASSWORDO!",
+    "admins": [ "DISCORD ID OF SERVER ADMIN 1",
+                "DISCORD ID OF SERVER ADMIN 2",
+                "DISCORD ID OF SERVER ADMIN 3",
+                "DISCORD ID OF SERVER ADMIN N"
+    ]
 }
