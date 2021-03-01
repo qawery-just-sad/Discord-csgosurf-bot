@@ -32,7 +32,7 @@
     "log-symbols": "^4.0.0",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
-    "rcon-srcds": "^1.2.1",
+    "rcon-srcds": "^2.0.1",
     "srcds-rcon": "^2.2.1",
     "steam-user": "^4.19.3",
     "steamapi": "^2.1.2",
