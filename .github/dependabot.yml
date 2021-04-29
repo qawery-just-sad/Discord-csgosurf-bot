@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "06:00"
+    timezone: Europe/Warsaw
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: steam-user
+    versions:
+    - 4.19.2
+  - dependency-name: gamedig
+    versions:
+    - 2.0.24
