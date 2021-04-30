@@ -28,7 +28,7 @@
     "discord.js": "^12.5.3",
     "gamedig": "^3.0.0",
     "giphy-js-sdk-core": "^1.0.6",
-    "humanize-duration": "^3.25.1",
+    "humanize-duration": "^3.25.2",
     "log-symbols": "^4.0.0",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
