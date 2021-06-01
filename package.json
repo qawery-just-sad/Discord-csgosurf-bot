@@ -26,7 +26,7 @@
     "common-tags": "^1.8.0",
     "db-keep-alive": "^1.0.2",
     "discord.js": "^12.5.3",
-    "gamedig": "^3.0.3",
+    "gamedig": "^3.0.5",
     "giphy-js-sdk-core": "^1.0.6",
     "humanize-duration": "^3.26.0",
     "log-symbols": "^5.0.0",
