@@ -34,7 +34,7 @@
     "path": "^0.12.7",
     "rcon-srcds": "^2.0.1",
     "srcds-rcon": "^2.2.1",
-    "steam-user": "^4.20.2",
+    "steam-user": "^4.23.0",
     "steamapi": "^2.2.0",
     "steamid": "^2.0.0",
     "steamidconvert": "^0.2.4",
